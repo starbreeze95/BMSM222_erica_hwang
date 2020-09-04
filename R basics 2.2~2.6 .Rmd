@@ -3,6 +3,10 @@ title: "R Notebook"
 output: html_notebook
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(include = TRUE)
+```
+
 ## **2.2 The very basics**
 
 Before we get started with the motivating dataset, we need to cover the very basics of R.
@@ -105,7 +109,7 @@ log(x = 8, base = 2)
 
 The above code works, but we can save ourselves some typing: if no argument name is used, R assumes you are entering arguments in the order shown in the help file or by `args`. So by not using the names, it assumes the arguments are `x` follwed by `base`:
 
-```{r}
+```{r echo=TRUE}
 log(8,2)
 ```
 

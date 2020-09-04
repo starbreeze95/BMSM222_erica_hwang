@@ -711,7 +711,7 @@ codes[1:2]
 
 If elements have names, we can also access the entries using these names. Below are two examples.
 
-```{r collapse=T}
+```{r}
 codes["canada"]
 codes[c("egypt","italy")]
 ```

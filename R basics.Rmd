@@ -3,6 +3,11 @@ title: "R Basics chapter 2.2 - 2.6"
 output: html_notebook
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
 ## **2.2 The very basics**
 
 Before we get started with the motivating dataset, we need to cover the very basics of R.
@@ -12,7 +17,7 @@ Before we get started with the motivating dataset, we need to cover the very bas
 Suppose a high school student asks us for help solving several quadratic equations of the form $ax^2+bx+c=0.$
 The quadratic formula gives us the solutions:
 
-${-b + \sqrt{b^2-4ac} \over 2a}$ and ${-b - \sqrt{b^2-4ac} \over 2a}$
+<center> <h3> ${-b + \sqrt{b^2-4ac} \over 2a}$ and ${-b - \sqrt{b^2-4ac} \over 2a}$ </h3> </center>
 
 which of course change depending on the values of $a$,$b$,and $c$. One advantage of programming languages is that we can define variables and write expressions with these variables, similar to how we do so in math, but obtain a numeric solution. We will write out general code for the quadratic equation below, but if we are asked to solve $x^2+x-1=0$, then we define:
 
@@ -224,23 +229,17 @@ c <- -1
 1\. What is the sum of the first 100 positive integers? The formula for the sum of integers $1$ through $n$ is $n(n+1)/2$. Define $n=100$ and then use R to compute the sum of $1$ through $100$ using the formula. What is the sum?
 
 ```{r}
-1.
 n <- 100
 for1 <- n*(n+1)/2
 for1
-
-#> [1] 5050
 ```
 
 2\. Now use the same formula to compute the summ of the integers from 1 through 1,000.
 
 ```{r}
-2. 
 n <- 1000
 for1 <- n*(n+1)/2
 for1
-
-#> [1] 500500
 ```
 
 3\. Look at the result of typing the follwing code into R:
@@ -248,8 +247,6 @@ for1
 n <- 1000
 x <- seq(1,n)
 sum(x)
-
-#> [1] 500500
 ```
 
 Based on the result, what do you think the functions `seq` and `sum` do? You can use `help`.
@@ -263,8 +260,6 @@ d. `sum` always returns the same number.
 
 ```{r}
 log(sqrt(100),10)
-
-#> [1] 1
 ```
 
 5\. Which of the following will always return the numeric value stored in `x`? You can try out examples and use the help system if you want.
@@ -716,7 +711,7 @@ codes[1:2]
 
 If elements have names, we can also access the entries using these names. Below are two examples.
 
-```{r}
+```{r collapse=T}
 codes["canada"]
 codes[c("egypt","italy")]
 ```

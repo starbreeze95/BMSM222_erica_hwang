@@ -1,5 +1,5 @@
 ---
-title: "R Notebook"
+title: "R Basics 2.7 ~ 2.16"
 output:
   html_document:
     df_print: paged

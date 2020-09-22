@@ -626,10 +626,13 @@ n <- 1:100
 
 func1 <- function(n){
   x <- 1:n
-  sum(x)
+  tibble(sum = sum(x))
 }
 
-map_df(n,func1)
+df <- data.frame(n = n, s_n = map_df(n,func1), s_n_2 = s_n)
+
+str(df)
+class(df)
 ```
 
 
